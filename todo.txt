@@ -1,0 +1,4 @@
+Add pre built lists of ports to choose from
+Add different scanning techniques, check from PTP notes (zombie scan, xmas scan, etc)
+Add slow or fast scanning
+Add ability to randomize scanning sequence
