@@ -9,7 +9,7 @@ print(r"""\
  \___  /|__|  (____  / ____/____  >\___  >____  /___|  /
 /_____/            \/\/         \/     \/     \/     \/
 
-                     SECURITY SCANNER
+                    SECURITY SCANNER
 
 """)
 
