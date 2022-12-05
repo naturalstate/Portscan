@@ -13,10 +13,11 @@ print(r"""\
 
 """)
 
+
 ports = [22,25,80,53,443,445,8080,8443]
-#ports = int(input("Enter ports to scan: "))
-
-
+sport = input("Port to Scan from: \r\n")
+#make this input an array to process
+#ports = int(input("Enter ports to scan: \r\n"))
 
 #Add feature to automatically find local in for like Gateway, etc, WIFI passwords
 
@@ -25,7 +26,7 @@ def scanSYN(host):
         IP(dst=host)/
         TCP(sport=33333,dport=ports,flags="S")
         ,timeout=2,verbose=0)
-    print("Open ports for host %s" % host)
+    print("Open ports for host %s\r\n" % host)
     for (s,r,) in ans:
         if s[TCP].dport == r[TCP].sport and r[TCP].flags=="SA":
             print(s[TCP].dport)
@@ -37,9 +38,9 @@ def DNSScan(host):
         DNS(rd=1,qd=DNSQR(qname="www.google.com"))
         ,timeout=2,verbose=0)
     if ans and ans[UDP]:
-        print("DNS query for %s"%host)
+        print("DNS query for %s\r\n"%host)
 
-host = input("Enter the host to scan: ")
+host = input("Enter the host to scan: \r\n")
 try:
     ipaddress.ip_address(host)
 except:
