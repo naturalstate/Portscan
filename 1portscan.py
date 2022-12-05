@@ -13,12 +13,12 @@ print(r"""\
 
 """)
 
-ports = [25,80,53,443,445,8080,8443]
+ports = [22,25,80,53,443,445,8080,8443]
 #ports = int(input("Enter ports to scan: "))
 
 
 
-#Add feature to automatically find local infor like Gateway, etc, WIFI passwords
+#Add feature to automatically find local in for like Gateway, etc, WIFI passwords
 
 def scanSYN(host):
     ans,unans = sr(
